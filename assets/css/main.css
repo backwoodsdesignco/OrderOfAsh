@@ -1,6 +1,6 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600");
-
+@font-face { font-family: Angel; src: url( "../fonts/Angel.TTF"); } 
 
 /*
 	Snapshot by TEMPLATED
@@ -209,13 +209,14 @@ html, body {
 		}
 
 	a {
-		text-decoration: underline;
-		color: #19B5FE;
+		color: #691717;
+		font-weight: bold;
+		text-decoration: none;
 	}
 
 		a:hover {
 			text-decoration: none;
-			color: #019be3;
+			color: #000000;
 		}
 
 	strong, b {
@@ -245,8 +246,11 @@ html, body {
 		font-size: 2em;
 		font-family: Angel;
 		
-		
 	}
+
+
+
+
 
 		@media screen and (max-width: 480px) {
 
@@ -281,12 +285,25 @@ html, body {
 	}
 
 	h5 {
-		font-size: 0.9em;
+		font-size: 1.1em;
+		color: #691717;
+		margin-top: -20px;
 	}
 
 	h6 {
-		font-size: 0.7em;
+		font-size: 4em;
+		font-family: Angel;
+		text-align: center;
+		
 	}
+
+@media screen and (max-width: 480px) {
+
+			h6 {
+				font-size: 2em;
+			}
+
+		}
 
 	sub {
 		font-size: 0.8em;
@@ -548,6 +565,13 @@ html, body {
 		}
 
 		#contact .column {
+			padding: 3.5em 0 1.5em 0;
+			padding-left: 3.5em;
+			padding-right: 3.5em;
+			width: 50%;
+		}
+
+#contact .column2 {
 			padding: 3.5em 0 1.5em 0;
 			padding-left: 3.5em;
 			padding-right: 3.5em;
@@ -1357,6 +1381,8 @@ html, body {
 		margin-top: -0.6em;
 	}
 
+
+
 /* Table */
 
 	.table-wrapper {
@@ -1593,6 +1619,11 @@ body.is-loading #banner2 > .inner {
 		text-align: center;
 		color: #FFF;
 	}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
 		#banner:before {
 			-moz-transition: opacity 3s ease;
 			-webkit-transition: opacity 3s ease;
@@ -1635,7 +1666,7 @@ body.is-loading #banner2 > .inner {
 			z-index: 1;
 		}
 
-		#banner, #banner2 .inner {
+		#banner .inner {
 			-moz-transform: none;
 			-webkit-transform: none;
 			-ms-transform: none;
@@ -1650,10 +1681,23 @@ body.is-loading #banner2 > .inner {
 			padding: 0 2em;
 		}
 
-
+#banner2 .inner {
+			-moz-transform: none;
+			-webkit-transform: none;
+			-ms-transform: none;
+			transform: none;
+			-moz-transition: opacity 1s ease, transform 1s ease;
+			-webkit-transition: opacity 1s ease, transform 1s ease;
+			-ms-transition: opacity 1s ease, transform 1s ease;
+			transition: opacity 1s ease, transform 1s ease;
+			position: relative;
+			opacity: 1;
+			z-index: 3;
+			padding: 0 2em;
+		}
 
 		
-		#banner, #banner2 h1 {
+		#banner h1 {
 			font-size: 4em;
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
@@ -1671,13 +1715,39 @@ body.is-loading #banner2 > .inner {
 			text-decoration: none;
 		}
 
+#banner2 h1 {
+			font-size: 4em;
+			line-height: 1em;
+			margin: 0 0 0.5em 0;
+			padding: 0;
+			color: #FFF;
+		}
+
+		#banner2 p {
+			font-size: 1.5em;
+			margin-bottom: 1.75em;
+		}
+
+		#banner2 a {
+			color: #FFF;
+			text-decoration: none;
+		}
+
 		@media screen and (max-width: 1280px) {
 
 			#banner h1 {
 				font-size: 3.5em;
 			}
+			
+			#banner2 h1 {
+				font-size: 3.5em;
+			}
 
 		}
+			
+			
+
+	
 
 		@media screen and (max-width: 736px) {
 
@@ -1692,8 +1762,22 @@ body.is-loading #banner2 > .inner {
 				#banner p {
 					font-size: 1.25em;
 				}
+			
+			#banner2 {
+				background-attachment: scroll;
+			}
+
+				#banner2 h1 {
+					font-size: 2.25em;
+				}
+
+				#banner2 p {
+					font-size: 1.25em;
+				}
 
 		}
+
+
 
 /* Main */
 
@@ -1756,3 +1840,4 @@ body.is-loading #banner2 > .inner {
 			}
 
 		}
+
